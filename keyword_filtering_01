@@ -1,0 +1,4 @@
+"""Practice script. A dict with author, year and title of books. A function that sorts the dict by keywords."""
+
+def keyword_filter():
+    pass
