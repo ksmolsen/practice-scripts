@@ -4,9 +4,12 @@
 books_dict: dict[str, tuple[str, int]] = {"title_a": ("Author A", 1970), "title_b": ("Author B", 1980), "Title c": ("Author C", 1990)}
 
 
-for key, value_tuple in books_dict.items():
-    if value_tuple[1] > 1975:
-        print(key)
+def value_filter():
+    for key, value_tuple in books_dict.items():
+        if value_tuple[1] > 1975:
+            print(key)
+        
+value_filter()        
         
 #Notes to self:
 
@@ -17,3 +20,5 @@ for key, value_tuple in books_dict.items():
 #.items() is a method that runs through both keys and values simulaneously
 
 #value_tuple[1], remember that python start counting positions at [0]
+
+#Tuples are lighter than lists as they only take up one place in memory, lists more than one as they need to be able to be changed.
