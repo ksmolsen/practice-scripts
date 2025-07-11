@@ -1,6 +1,6 @@
 """This is not a single script, but a collection of different snippets of code aimed at
 refreshing and reinforcing my list, tuple, dict syntax, among other things. The goal is to 
-make my vocabulary accurate"""
+make my vocabulary accurate. Quality goal: 99% factual correctness, high, but not perfect communicative clarity."""
 
 #Run this in terminal: this method makes a string upper case. Strings are immutable, so the string that is printed is a new string.
 "hello".upper()
@@ -12,6 +12,8 @@ make my vocabulary accurate"""
 list_example = []
 dict_example = {}
 tuple_example = ()
+
+print("LISTS")
 
 list_example = ["item 0", "item 1", "item 2"]
 
@@ -57,7 +59,7 @@ list_example.pop(0)
 
 print(list_example)
 
-#You can combine two lists. Just use a +. This is called to concatenate.
+#You can combine two lists. Just use a +. This is called to concatenate, or concatenation.
 
 list_example_2 = ["list 2 item"]
 
@@ -75,6 +77,8 @@ print(701 not in combined_list)
 print(len(combined_list))
 
 #Tuples are immutable, meaning that once they are created, they can not be changed.
+
+print("TUPLES")
 
 tuple_example = ()
 
@@ -108,14 +112,69 @@ else:
 
 #Tuples can be used in situations where the data must not be changed, as tuples are immutable. Tuples are also faster than lists as they take up less memory.
 
+print("DICTIONARIES")
+"""Dictionaries are mutable containers that store objects. They link one object, a key, to another object, a value. 
+Linking objects like this is called mapping. The result is called a key-value pair."""
 
+#You can look up a key and get its value, but you can not use a value to look up a key.
 
+#Before Python 3.7, dictionaries did not store objects in order like lists or tuples. They do store insertion order now though.
 
+dict_example = {}
 
+dict_example = {10: "ten", 20: "twenty", 30: "thirty"}
 
+print(dict_example)
 
+#Adding a keyvalue pair is done like this: dict_name[key] = value.
 
+dict_example[40] = "forty"
 
+print(dict_example)
+
+#look up the value of a key like this: dict_name[key].
+
+print(dict_example[10])
+
+#A dictionary value can be any type (even a tuple!). A dictionary key must be an immutable key.
+
+tuple_as_key_dict = {("Tuple key", "in a dict works because tuples are immutable!"): "Remember that the value can be any type!"}
+
+print(tuple_as_key_dict)
+
+#Use the in keyword to look for a key in a dictionary. This does not work on values.
+
+if 20 in dict_example:
+    print(dict_example[20])
+    
+#The keyword not can also be used.
+
+if 25 not in dict_example:
+    print("25 not in dict_example.")
+    
+#The keyword del removes a key-value pair from a dictionary. 
+
+del dict_example[20]
+
+print(dict_example)
+
+#pop also works on dictionaries, and del works on lists too, but not tuples as they are immutable.
+
+dict_example.pop(10)
+
+print(dict_example)
+
+("CONTAINERS IN CONTAINERS")
+
+#lists can be stored in lists
+
+list_in_list = [[1, 2, 3, 4, 5], [10, 20, 30, 40, 50]]
+
+print(list_in_list)
+
+#The lists inside the list can be accessed by their index.
+
+print(list_in_list[1])
 
 
 
